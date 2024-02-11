@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://biidrrx715h1i"]
+
+[ext_resource type="PackedScene" uid="uid://bk22bckxwhyod" path="res://src/dungeon/dungeon.tscn" id="1_7mocy"]
+[ext_resource type="Script" path="res://main.gd" id="1_swu3w"]
+[ext_resource type="PackedScene" uid="uid://cb3r4ke3w72h4" path="res://src/player/player.tscn" id="3_itrhx"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_swu3w")
+
+[node name="Dungeon" parent="." instance=ExtResource("1_7mocy")]
+position = Vector2(4, 4)
+
+[node name="Player" parent="." instance=ExtResource("3_itrhx")]
+position = Vector2(60, 66)

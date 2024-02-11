@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://bln64lntq61ph"]
+
+[ext_resource type="Texture2D" uid="uid://c6rtb7ehd08ho" path="res://assets/map.png" id="1_0xle3"]
+[ext_resource type="Script" path="res://src/dungeon/dungeon_map.gd" id="1_3spqm"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jeobb"]
+texture = ExtResource("1_0xle3")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_gttqy"]
+sources/0 = SubResource("TileSetAtlasSource_jeobb")
+
+[node name="Dungeon_map" type="Node2D"]
+script = ExtResource("1_3spqm")
+
+[node name="TileMap" type="TileMap" parent="."]
+texture_filter = 1
+tile_set = SubResource("TileSet_gttqy")
+format = 2
+layer_0/name = "ground"
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 196611, 0, 0, 196610, 0, 0, 196609, 0, 0, 196608, 0, 0)
+layer_1/name = "rooms"
+layer_1/tile_data = PackedInt32Array()
+layer_2/name = "exit0"
+layer_2/tile_data = PackedInt32Array()
+layer_3/name = "exit1"
+layer_3/tile_data = PackedInt32Array()
+layer_4/name = "exit2"
+layer_4/tile_data = PackedInt32Array()
+layer_5/name = "exit3"
+layer_5/tile_data = PackedInt32Array()
+layer_6/name = "object"
+layer_6/tile_data = PackedInt32Array()
